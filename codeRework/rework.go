@@ -12,3 +12,5 @@ func main() {
 	var total_weight float64 = pebbleweight + rockweight + boulderweight
 	fmt.Println(total_weight)
 }
+
+//fas
