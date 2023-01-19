@@ -32,7 +32,7 @@ func main() {
 			log.Fatal(err)
 		}
 		input = strings.TrimSpace(input)  //удаление символа новой строки
-		guess, err := strconv.Atoi(input) //входная строка преобразовывается в число
+		guess, err := strconv.Atoi(input) //входная строка преобразовывается в числыо
 		if err != nil {
 			log.Fatal(err)
 		}
