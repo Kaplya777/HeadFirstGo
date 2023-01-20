@@ -36,10 +36,10 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		if guess > target {
-			fmt.Println("Oops! You guess was high")
-		} else if target > guess {
-			fmt.Println("Oops! You guess was low")
+		if guess < target {
+			fmt.Println("Oops! You guess was LOW")
+		} else if guess > target {
+			fmt.Println("Oops! You guess was HIGH")
 		} else {
 			success = true 
 			fmt.Println("WOW! You guessed it!")
