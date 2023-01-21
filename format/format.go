@@ -9,7 +9,7 @@ func paintNedeed(width float64, heigth float64) { //объявление фун�
 }
 
 func main() {
-	paintNedeed(4.2, 3.0)
+	paintNedeed(4.2, 3.2)
 	paintNedeed(5.2, 3.5)
 	paintNedeed(5.0, 3.3)
 }
