@@ -41,6 +41,7 @@ func main() {
 		} else if target > guess {
 			fmt.Println("Oops! You guess was low")
 		} else {
+			success = true
 			fmt.Println("WOW! You guessed it!")
 			break //выход из цикла если пользователь угадал число
 		}
