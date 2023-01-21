@@ -2,14 +2,18 @@ package main
 
 import "fmt"
 
-func paintNedeed(width float64, heigth float64) { //объявление функции
+func paintNedeed(width float64, heigth float64) float64 { //объявление функции
 	area := width * heigth
-	fmt.Printf("%.2f liters needed\n", area/10.0)
-
+    return area / 10.0
 }
 
 func main() {
-	paintNedeed(4.2, 3.2)
-	paintNedeed(5.2, 3.5)
-	paintNedeed(5.0, 3.3)
+    var amount, total float64
+    amount = paintNedeed(4.2, 3.0)
+    fmt.Printf("%0.2f Litres nedeed\n", amount)
+    total += amount
+    amount = paintNedeed(5.2, 3.5)
+    fmt.Printf("%0.2f Litres nedeed\n", amount)
+    total += amount
+    fmt.Printf("Total: %0.2f liters\n", total)
 }
