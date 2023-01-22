@@ -13,7 +13,7 @@ func squareRoot (number float64) (float64, error)  {
 }
 
 func main() {
-    root, err := squareRoot(-9.3)
+    root, err := squareRoot(9.3)
     if err != nil {
         fmt.Println(err)
     } else {
