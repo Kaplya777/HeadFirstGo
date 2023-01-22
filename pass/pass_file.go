@@ -10,19 +10,40 @@ import (
 	"strings"
 )
 
+func getFloat() (float64, error) {
+    reader := bufio.NewReader(os.Stdin)
+    input, err := reader.ReadString('\n')
+    if err != nil {
+        return 0, err
+    }
+
+    input = strings.TrimSpace(input)
+    number, err := strconv.ParseFloat(input, 64)
+    if err != nil {
+        return 0, err
+    }
+    return number, nil
+}
+
+
 func main() {
 	fmt.Print("Enter a grade: ")
-	reader := bufio.NewReader(os.Stdin)
+    grade, err := getFloat()
+    if err != nil {
+        log.Fatal(err)
+    }
+	/* reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
 	if err != nil {
 		log.Fatal(err)
-	}
+	} */
 
-	input = strings.TrimSpace(input)
+
+	/*input = strings.TrimSpace(input)
 	grade, err := strconv.ParseFloat(input, 64)
 	if err != nil {
 		log.Fatal(err)
-	}
+	}*/
 
 	var status string
 	if grade >= 60 {
