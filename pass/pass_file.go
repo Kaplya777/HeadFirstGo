@@ -2,14 +2,12 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
+	"keyboard"
 	"log"
-	"os"
-	"strconv"
-	"strings"
 )
 
+/*
 func getFloat() (float64, error) {
     reader := bufio.NewReader(os.Stdin)
     input, err := reader.ReadString('\n')
@@ -24,26 +22,38 @@ func getFloat() (float64, error) {
     }
     return number, nil
 }
-
-
+*/
+/*
 func main() {
 	fmt.Print("Enter a grade: ")
     grade, err := getFloat()
     if err != nil {
         log.Fatal(err)
     }
-	/* reader := bufio.NewReader(os.Stdin)
+*/
+/*
+    fmt.Print("Enter a grade: ")
+    reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
 	if err != nil {
 		log.Fatal(err)
-	} */
+	}
 
 
-	/*input = strings.TrimSpace(input)
+
+	/*
+    input = strings.TrimSpace(input)
 	grade, err := strconv.ParseFloat(input, 64)
 	if err != nil {
 		log.Fatal(err)
-	}*/
+	}
+*/
+func main() {
+	fmt.Print("Enter a garde: ")
+	grade, err := keyboard.GetFloat()
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	var status string
 	if grade >= 60 {
