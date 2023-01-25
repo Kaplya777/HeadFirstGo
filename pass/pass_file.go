@@ -41,7 +41,7 @@ func main() {
 
 
 
-	/*
+
     input = strings.TrimSpace(input)
 	grade, err := strconv.ParseFloat(input, 64)
 	if err != nil {
